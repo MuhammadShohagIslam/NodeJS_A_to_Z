@@ -1,9 +1,10 @@
 /*
     *** Path Module ***
-        Path: path module includes methods to deal with file paths or location
+        Path: The Path module provides a way of working with directories and file path.
+       =>  path module includes methods to deal with file paths or location
 
 */
-// importing Core module like path of Node JS 
+// importing Core module like path of Node JS
 const path = require('path');
 // console.log(path);
 
@@ -13,7 +14,7 @@ const currentPath = __filename;
 
 /*
     *** path.basename(path) ***
-        => The path.basename() method returns the last portion of a path.
+        => The path.basename() method returns the last part of a path.
 */
 const baseName = path.basename(currentPath);
 console.log(baseName);
@@ -41,27 +42,27 @@ console.log(extensionName);
 */
 const pathObj = {
     root: '/ignore',
-    dir:'./node',
+    dir: './node',
     name: 'path',
-    ext:'.js'
+    ext: '.js',
 };
 const pathFormat = path.format(pathObj);
 console.log(pathFormat);
 
 /*
     *** path.isAbsolute(path) ***
-            => The path.isAbsolute(path) method determines  if path is an absoulte path or not with boolean way
+            => The path.isAbsolute(path) method determines
+                if path is an absoulte path or not with boolean way
+            => Returns true if a path is a absolue path, otherwise false
 */
 console.log(path.isAbsolute(currentPath));
 console.log(path.isAbsolute('./global.js')); // (.) means make a relation with current directory, so it is not abosulte path
 
 /*
     *** path.join([...paths]) ***
-            => The path.join([...paths]) method joins all given path segements together using the paltform
-        -specific separator as a delimiter, then normalizers
-        the resulting path
-
-        => we use this for solving platform dependency
+            => The path.join([...paths]) method joins the specified path segments into one path.
+            => The specified path segments must be strings, separated by comma.
+            => we use this for solving platform dependency
 
 */
 const joinPath = path.join('home', 'local', 'muhammadShohagIslam', 'testfile.js');
@@ -69,7 +70,7 @@ console.log(joinPath);
 
 /*
     *** path.resolve([...paths]) ***
-            => The path.resolve([...paths]) method resolve a sequence of paths or path segments into an absolute path.
+            => The path.resolve([...paths]) method resolves the specified paths into an absolue path
 
 */
 const resolvePath = path.resolve(__dirname, 'script', 'test.js');
@@ -77,12 +78,10 @@ console.log(resolvePath); // return a absolute path
 
 /*
     *** path.parse(path) ***
-            => The path.parse(path) method return an object whose properties represent significant elements of the path.
+            => The path.parse(path) method return an object
+                whose properties represent significant elements of the path.
+            => formats a path string into a path object
             => we can get the details of the path.
 */
 const parsePath = path.parse(currentPath);
 console.log(parsePath);
-
-
-
-
