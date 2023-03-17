@@ -6,6 +6,11 @@
      => firstly, client request => going Event Queue(syn, async) 
             => syn task execute line by line from Event Queue
             => asnc task to Event Queue => Thread Pool => Through Event Loop => Event Queue => Execute
+     => for avoid to nested function callback hell => promise.
+     => multiple asynchrouns task work with promise.
+     
+    *** There are three step any promise (panding, resolve, rejected)
+    *** When we create any object from constructor, we should put before constructor new like new Promsie()
 
     => Node JS compile JavaScript Code outside the browser.
 
