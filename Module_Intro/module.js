@@ -15,6 +15,10 @@
             => Third Party Module
 
 */
+/*
+    *** Each of very javascript file of the node.js has module object.Into module object has export property
+
+*/
 
 /*
     *** Module Wrapper Function ***
@@ -39,6 +43,8 @@
 const add = (a, b) => a + b;
 const sub = (a, b) => a - b;
 exports.div = (a, b) => a / b;
+module.exports.div = function (){
+} // common js system
 
 const text = (a, b) => add(a, b) / sub(a, b);
 
@@ -50,10 +56,12 @@ const text = (a, b) => add(a, b) / sub(a, b);
 
 */
 // module.exports = text; // single data exports system
+// this default export
 
 // another solution
 // module.exports.add =add;
 // module.exports.text = text;
+// name export ( we can export multiple function, when necessary, we can immport it
 
 // multiple data exports system
 module.exports = {
@@ -66,3 +74,9 @@ module.exports = {
 
 // show details of module
 // console.log(module);
+
+// if we use package.json file type="module", we can use ES6 module system.
+export funtionNanme
+export default functionName;
+import name from '.."// default import
+import {name} from '." // name import
