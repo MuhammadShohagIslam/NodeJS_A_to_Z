@@ -2,6 +2,10 @@
                                     *** Node JS***
 
     => Node JS: is a JavaScript runtime environment which is build on Chrome's V8
+    => Node JS is a single thread, non-blocking, asynchronous language.
+     => firstly, client request => going Event Queue(syn, async) 
+            => syn task execute line by line from Event Queue
+            => asnc task to Event Queue => Thread Pool => Through Event Loop => Event Queue => Execute
 
     => Node JS compile JavaScript Code outside the browser.
 
