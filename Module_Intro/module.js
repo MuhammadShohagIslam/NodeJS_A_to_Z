@@ -17,6 +17,9 @@
 */
 /*
     *** Each of very javascript file of the node.js has module object.Into module object has export property
+    *** Browser is like window is the global variable, global is the node.js global varibale
+    *** var we can attach with window, but let and cost is not attach with window object
+    *** var, let const is not attch with global variable, like var name= "b", console.log(global.name) => undefined
 
 */
 
